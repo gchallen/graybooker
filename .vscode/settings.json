@@ -1,0 +1,41 @@
+{
+  "files.exclude": {
+    "**/.cache": true,
+    "**/dist": true,
+    "**/bundled": true,
+    "**/node_modules": true,
+    "**/package-lock.json": true,
+    "**/yarn.lock": true,
+    "**/.next": true,
+    "output": true,
+    "api/downloads": true,
+    "api/uploads": true,
+    "api/playground": true,
+    "**/yarn-error.log": true
+  },
+  "eslint.validate": ["typescriptreact"],
+  "emmet.showExpandedAbbreviation": "never",
+  "files.trimTrailingWhitespace": true,
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    },
+    "files.trimTrailingWhitespace": false
+  },
+  "editor.autoClosingBrackets": "never",
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "editor.parameterHints.enabled": false,
+  "editor.quickSuggestions": {
+    "other": false,
+    "comments": false,
+    "strings": false
+  },
+  "workbench.editor.enablePreview": false,
+  "typescript.autoClosingTags": false,
+  "files.associations": {
+    "*.mdx": "markdown"
+  }
+}

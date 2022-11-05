@@ -1,0 +1,78 @@
+currentRoot: http://www.trustees.uillinois.edu/trustees/resources/
+downloadRoot: http://www.trustees.uillinois.edu/trustees/resources/historical-files/
+start: 2007
+end: 2021
+employeeCodes:
+  AA: true
+  AB: true
+  AG: true
+  AH: true
+  AL: true
+  AM: true
+  BA: true
+  BB: true
+  BC: true
+  BD: true
+  BG: true
+  BH: true
+  PA: true
+  PB: true
+tenureCodes:
+  A: true
+  M: true
+  N: true
+  P: true
+  Q: true
+  T: true
+  W: true
+knownTitles:
+  - Asst Var Coach Mens Baseball
+  - Resource & Policy Analyst
+  - Bus Srvs Spec
+  - Sponsored Projects Specialist
+  - Acad Advisor/Online Coord
+  - Archival Operations & Ref Spec
+  - "Coord of Int'l Projects"
+  - Plan Review Coord
+  - Coord of Business Operations
+  - Systems Engineer
+  - Dir of Dept Bus Affairs
+  - Technol Spec
+  - BH PROF & DIR IN RESIDENCE
+  - Senior Application Specialist
+  - Engineer, Capital Planning
+  - Research Project Manager
+  - Clinical Counselor
+  - Asst Director, HR-College
+  - Clinical Assistant Professor
+  - Res Data Analyst
+  - Asst Prof
+  - Exec Dir for Univ Payroll
+  - Enterprise-Wide Auditor
+  - Sr Fellow
+  - Clin Assoc Prof of Pham in Med
+  - Clinical Pharmacist
+  - Coordinator Grants & Contracts
+  - Parent Program Specialist
+  - Advanced Practice Nurse
+  - Professor
+  - Asst Dir of Hosp Fin Budg & Ca
+  - Manager, Nursing Admin. Svcs
+  - Head Women Soccer Coach
+  - Director of Web Services
+  - Assoc Dir Conf Serv
+  - Dir Conf Services
+  - Systems Integrator
+  - Project Manager
+  - AG & CASH MGMT ANALYST
+  - CHANC UIC & VPRES UI
+  - CZECH/SLOVAK LGL EXCH DIR
+  - DIR, INATL STDNT PRGM
+  - Head, Professional Pilot Div
+  - Assoc Dir Creative Writing
+  - Acting Airport Manager
+  - Dir Ofc Rsk Mgt & Ins Res
+  - Dir Undergrad Studies
+  - Fire College Coordinator
+  - "Asst Head Curr&Instr"
+  - "Sen Assoc VP Bus & Finance"
