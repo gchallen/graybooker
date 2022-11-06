@@ -92,3 +92,4 @@ way to access older data. But web scraping is probably the best way to get at cu
 - 2022-11-05: Fixed parser to include academic tenure code. (HT David Dalpiaz.)
 - 2022-11-06: Include campus codes in output.
 - 2022-11-06: Add CSV output in `output/results.csv.gz`.
+- 2022-11-06: Fix CSV output problems.
