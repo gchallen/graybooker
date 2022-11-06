@@ -10,17 +10,17 @@ Promise.resolve().then(async () => {
   const HEADER = [
     "Year",
     "Name",
-    "Present Total Salary",
-    "Proposed Total Salary",
+    "PresentTotalSalary",
+    "ProposedTotalSalary",
     "Location",
     "Category",
     "SubCategory",
     "Title",
     "Class",
-    "Present FTE",
-    "Proposed FTE",
-    "Present Salary",
-    "Proposed Salary",
+    "PresentFTE",
+    "ProposedFTE",
+    "PresentSalary",
+    "ProposedSalary",
     "Tenure Code",
   ]
   console.log(stringify([HEADER], { quoted: true, escape: "\\" }).trim())
@@ -45,7 +45,7 @@ Promise.resolve().then(async () => {
           role.proposedFTE,
           roundTo(role.presentSalary),
           roundTo(role.proposedSalary),
-          role.tenureCode,
+          role.tenureCode || "-",
         ]
         assert(data.length === HEADER.length)
         const row = stringify([data], { quoted: true, escape: "\\" })
