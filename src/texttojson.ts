@@ -29,7 +29,7 @@ Promise.resolve()
 
     return Promise.all(
       _.map(years, async (year) => {
-        const fileTokens = _((await fs.readFile(`./books/${year}.txt`)).toString().split("\n"))
+        const fileTokens = _((await fs.readFile(`${appRootPath}/books/${year}.txt`)).toString().split("\n"))
           .map((line) => {
             return line.trim()
           })
@@ -41,7 +41,7 @@ Promise.resolve()
           })
           .value()
 
-        const lines = _((await fs.readFile(`./books/${year}-raw.txt`)).toString().split("\n"))
+        const lines = _((await fs.readFile(`${appRootPath}/books/${year}-raw.txt`)).toString().split("\n"))
           .map((line) => {
             return line.trim()
           })
@@ -223,6 +223,7 @@ Promise.resolve()
 
           if (!(person.name in people)) {
             people[person.name] = {
+              name: person.name,
               year,
               presentTotalSalary: 0,
               proposedTotalSalary: 0,
