@@ -9,7 +9,7 @@ import minimist from "minimist"
 
 const expect = chai.expect
 
-const categoryPattern = new RegExp(/^\w\w - (.*)$/)
+const categoryPattern = new RegExp(/^(\w\w - .*)$/)
 const subCategoryPattern = new RegExp(/^\d\d\d - (.*)$/)
 const personEndPattern = new RegExp(/\$[\d.,]+$/)
 const salaryPattern = new RegExp(/([\d.]+) ([\d.]+) \$([\d.,]+) \$([\d.,]+)$/)
