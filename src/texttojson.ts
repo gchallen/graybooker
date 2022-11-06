@@ -175,10 +175,12 @@ Promise.resolve()
             currentTitle = knownTitle!!
           }
 
+          let tenureCode
           if (employeeCode === "AA") {
             const titleParts = currentTitle.split(" ")
             if (titleParts[titleParts.length - 1] in config.tenureCodes) {
               currentTitle = titleParts.slice(0, titleParts.length - 1).join(" ")
+              tenureCode = titleParts[titleParts.length - 1]
             }
           }
           const salaryPortion = tokens.slice(employeeCodePosition + 1).join(" ")
@@ -194,6 +196,7 @@ Promise.resolve()
             proposedFTE: parseFloat(salaryMatch!![2]),
             presentSalary: parseFloat(salaryMatch!![3].replace(/,/g, "")),
             proposedSalary: parseFloat(salaryMatch!![4].replace(/,/g, "")),
+            tenureCode,
           }
           expect(person.name).to.be.ok
           expect(person.category).to.be.ok

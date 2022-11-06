@@ -72,3 +72,7 @@ Scraping the data from the HTML should be substantially easier.
 Unfortunately, https://www.bot.uillinois.edu/resources/gray_book seems to be only archived by `archive.org` going back to 2017 (unless the page changed names).
 So parsing the PDFs may be the only way to access older data.
 But web scraping is probably the best way to get at current and future data.
+
+## Updates
+
+* 2022-11-05: Fixed parser to include academic tenure code. (HT David Dalpiaz.)
