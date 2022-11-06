@@ -76,3 +76,4 @@ But web scraping is probably the best way to get at current and future data.
 ## Updates
 
 * 2022-11-05: Fixed parser to include academic tenure code. (HT David Dalpiaz.)
+* 2022-11-06: Include campus codes in output.

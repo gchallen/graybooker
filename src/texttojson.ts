@@ -9,8 +9,9 @@ import minimist from "minimist"
 
 const expect = chai.expect
 
-const categoryPattern = new RegExp(/^\w\w - (.*)$/)
-const subCategoryPattern = new RegExp(/^\d\d\d - (.*)$/)
+const campusPattern = new RegExp(/(\d\d\d\d) - \((.*)\)/)
+const categoryPattern = new RegExp(/^(\w\w) - (.*)$/)
+const subCategoryPattern = new RegExp(/^(\d\d\d) - (.*)$/)
 const personEndPattern = new RegExp(/\$[\d.,]+$/)
 const salaryPattern = new RegExp(/([\d.]+) ([\d.]+) \$([\d.,]+) \$([\d.,]+)$/)
 
@@ -51,19 +52,25 @@ Promise.resolve()
 
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const people: { [key: string]: any } = {}
+        let currentCampus: string
         let currentCategory: string
         let currentSubCategory: string
         let currentName: string
         _.each(lines, (line) => {
+          const campusMatch = campusPattern.exec(line)
+          if (campusMatch && campusMatch[1] == year) {
+            currentCampus = campusMatch[2]
+            return
+          }
           const categoryMatch = categoryPattern.exec(line)
           if (categoryMatch) {
-            currentCategory = categoryMatch[1]
+            currentCategory = categoryMatch[2]
             return
           }
 
           const subCategoryMatch = subCategoryPattern.exec(line)
           if (subCategoryMatch) {
-            currentSubCategory = subCategoryMatch[1]
+            currentSubCategory = subCategoryMatch[2]
             return
           }
 
@@ -188,6 +195,7 @@ Promise.resolve()
           expect(salaryMatch, line).to.be.ok
           const person = {
             name: currentName,
+            campus: currentCampus,
             category: currentCategory,
             subCategory: currentSubCategory,
             title: currentTitle.toUpperCase(),
@@ -198,11 +206,12 @@ Promise.resolve()
             proposedSalary: parseFloat(salaryMatch!![4].replace(/,/g, "")),
             tenureCode,
           }
-          expect(person.name).to.be.ok
-          expect(person.category).to.be.ok
-          expect(person.subCategory).to.be.ok
+          expect(person.name).to.be.a("string")
+          expect(person.campus).to.be.a("string")
+          expect(person.category).to.a("string")
+          expect(person.subCategory).to.a("string")
           expect(person.title, `${JSON.stringify(person)} ${line}`).to.be.ok
-          expect(person.class).to.be.ok
+          expect(person.class).to.be.a("string")
           expect(person.presentFTE).to.be.a("number")
           expect(person.presentFTE).to.be.at.least(0.0)
           expect(person.proposedFTE).to.be.a("number")
