@@ -9,6 +9,7 @@
     "checker": "npm run depcheck && npm run prettier && npm run eslint",
     "depcheck": "depcheck --ignores=prettier-plugin-*,eslint-plugin-*",
     "eslint": "eslint src/**",
+    "exporttocsv": "npm run --silent jsontocsv > output/results.csv",
     "jsontocsv": "ts-node src/jsontocsv.ts",
     "ncu": "ncu",
     "pdftotext": "ts-node src/pdftotext.ts",

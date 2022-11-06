@@ -23,7 +23,9 @@ Promise.resolve().then(async () => {
     "Proposed Salary",
     "Tenure Code",
   ]
-  console.log(stringify([HEADER], { quoted: true, escape: "\\" }))
+  console.log(stringify([HEADER], { quoted: true, escape: "\\" }).trim())
+
+  const roundTo = (input: number) => Math.round(input * 100) / 100
 
   for (const year of Object.keys(results).sort()) {
     for (const name of Object.keys(results[year]).sort()) {
@@ -32,17 +34,17 @@ Promise.resolve().then(async () => {
         const data = [
           year,
           name,
-          presentTotalSalary,
-          proposedTotalSalary,
-          role.location,
+          roundTo(presentTotalSalary),
+          roundTo(proposedTotalSalary),
+          role.campus,
           role.category,
           role.subCategory,
           role.title,
           role.class,
           role.presentFTE,
           role.proposedFTE,
-          role.presentSalary,
-          role.proposedSalary,
+          roundTo(role.presentSalary),
+          roundTo(role.proposedSalary),
           role.tenureCode,
         ]
         assert(data.length === HEADER.length)
