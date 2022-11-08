@@ -21,7 +21,7 @@ Promise.resolve().then(async () => {
     "ProposedFTE",
     "PresentSalary",
     "ProposedSalary",
-    "Tenure Code",
+    "TenureCode",
   ]
   console.log(stringify([HEADER], { quoted: true, escape: "\\" }).trim())
 

@@ -94,3 +94,4 @@ way to access older data. But web scraping is probably the best way to get at cu
 - 2022-11-06: Add CSV output in `output/results.csv.gz`.
 - 2022-11-06: Fix CSV output problems.
 - 2022-11-06: Manual fix for "S in input.
+- 2022-11-08: Remove spaces in CSV header because R can't cope
